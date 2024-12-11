@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer base{
+  html{
+    @apply scroll-smooth
+  }
+  body{
+    @apply font-main text-fs-400 overflow-x-hidden min-h-screen leading-normal bg-custom-white text-black select-none
+  }
+}
+
+.custom-container{
+  margin-block: 1em;
+  padding-inline: calc(100% - 1em)
+}
