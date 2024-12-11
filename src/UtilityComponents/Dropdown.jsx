@@ -21,9 +21,10 @@ export default function Dropdown({question, answer}) {
     )
 
     const dropdownToggle = classNames(
-        'text-black animate-rotate',
+        'text-black cursor-pointer',
         {
-            'text-white animate-rotateReverse': isExpanded
+            'animate-rotateReverse': !isExpanded,
+            'text-white animate-rotate' : isExpanded
         }
     )
   return (

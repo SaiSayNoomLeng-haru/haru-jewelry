@@ -27,7 +27,7 @@ export default {
         'fs-500' : '1.5rem',
         'fs-400': '1.2rem',
         'fs-300': '1rem',
-        'fs-200': '0.875rem'
+        'fs-200': '0.575rem'
       },
       screens: {
         'md' : '35em',
