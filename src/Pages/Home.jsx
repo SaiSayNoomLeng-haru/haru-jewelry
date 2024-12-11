@@ -1,23 +1,14 @@
 import { memo } from "react"
-import ProductCard from "../UtilityComponents/ProductCard/ProductCardIndex"
+
+import BlogCard from "../UtilityComponents/BlogCard/BlogCardIndex"
 
 const Home = () => {
     return(
         <div className="flex gap-2">
-            <ProductCard>
-                <ProductCard.Image />
-                <ProductCard.Content />
-            </ProductCard>
-
-            <ProductCard>
-                <ProductCard.Image />
-                <ProductCard.Content />
-            </ProductCard>
-
-            <ProductCard>
-                <ProductCard.Image />
-                <ProductCard.Content />
-            </ProductCard>
+            <BlogCard>
+                <BlogCard.Image />
+                <BlogCard.Content />
+            </BlogCard>
 
         </div>
     )

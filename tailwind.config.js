@@ -16,7 +16,7 @@ export default {
         'custom-pale-green': '#15ad99'
       },
       fontFamily: {
-        'main' : ["Belleza", 'sans-serif'],
+        'main' : [ "Lato", 'sans-serif'],
         'accent' : ["Italiana", 'sans-serif']
       },
       fontSize: {
