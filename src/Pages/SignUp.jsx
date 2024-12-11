@@ -1,11 +1,11 @@
 import { memo } from "react"
 
-const SignIn = () => {
+const SignUp = () => {
     return(
         <div >
-           Sign In
+           Home
         </div>
     )
 }
 
-export default memo(Sign Up)
+export default memo(SignUp)
