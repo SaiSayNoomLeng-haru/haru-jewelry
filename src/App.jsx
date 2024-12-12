@@ -11,6 +11,7 @@ const LoadingSpinner = lazy(() => import('./UtilityComponents/LoadingSpinner'));
 const Account = lazy(() => import('./Pages/Account'));
 const Home = lazy(() => import('./Pages/Home'));
 const Catalogue = lazy(() => import('./Pages/Catalogue'));
+const Career = lazy(() => import('./Pages/Career'))
 const AboutUs = lazy(() => import('./Pages/AboutUs'));
 const Blogs = lazy(() => import('./Pages/Blogs'));
 const BlogDetail = lazy(() => import('./Pages/BlogDetail'));
@@ -23,6 +24,11 @@ const ProductDetails = lazy(() => import('./Pages/ProductDetails'));
 const SignIn = lazy(() => import('./Pages/SignIn'));
 const SignUp = lazy(() => import('./Pages/SignUp'));
 const Wishlist = lazy(() => import('./Pages/Wishlist'));
+const ErrorBoundary = lazy(() => import('./Components/ErrorBoundary'));
+const AuthErrorBoundary = lazy(() => import('./Components/AuthErrorBoundary'));
+
+// loaders
+import { loader as HomePageLoader } from './Pages/Home';
 
 const router = createBrowserRouter([
   {
@@ -31,66 +37,86 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
+        loader: HomePageLoader,
+        errorElement: <ErrorBoundary />
       },
       {
-        path: 'my-account',
-        element: <Account />
+        path: 'profile',
+        element: <Account />,
+        errorElement: <AuthErrorBoundary />
       },
       {
         path: 'about-us',
-        element: <AboutUs />
+        element: <AboutUs />,
+        errorElement: <ErrorBoundary />
       },
       {
         path: 'blogs',
-        element: <Blogs />
+        element: <Blogs />,
+        errorElement: <ErrorBoundary />
       },
       {
         path: 'blogs/:id',
-        element: <BlogDetail />
+        element: <BlogDetail />,
+        errorElement: <ErrorBoundary />
       },
       {
         path: 'cart',
-        element: <Cart />
+        element: <Cart />,
+        errorElement: <AuthErrorBoundary />
       },
       {
         path: 'catalogue',
-        element: <Catalogue />
+        element: <Catalogue />,
+        errorElement: <ErrorBoundary />
       },
       {
         path: 'contact-us',
-        element: <ContactUs />
+        element: <ContactUs />,
+        errorElement: <ErrorBoundary />
       },
       {
         path: 'faq',
-        element: <FAQ />
+        element: <FAQ />,
+        errorElement: <ErrorBoundary />
       },
       {
         path: 'forgot-password',
-        element: <ForgotPassword />
+        element: <ForgotPassword />,
+        errorElement: <AuthErrorBoundary />
       },
       {
         path: 'catalogue/:id',
-        element: <ProductDetails />
+        element: <ProductDetails />,
+        errorElement: <ErrorBoundary />
       },
       {
         path: 'sign-in',
-        element: <SignIn />
+        element: <SignIn />,
+        errorElement: <AuthErrorBoundary />
       },
       {
         path: 'sign-up',
-        element: <SignUp />
+        element: <SignUp />,
+        errorElement: <AuthErrorBoundary />
       },
       {
         path: 'wishlist',
-        element: <Wishlist />
+        element: <Wishlist />,
+        errorElement: <AuthErrorBoundary />
+      },
+      {
+        path: 'career',
+        element: <Career />
+      },
+      {
+        path: '*',
+        element: <NotFound />
       }
     ]
   },
-  {
-    path: '*',
-    element: <NotFound />
-  }
+  
 ])
 
 function App() {

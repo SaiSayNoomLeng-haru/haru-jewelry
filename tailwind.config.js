@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        'custom-accent' : '#bfdbfe',
         'custom-white': '#f8f2f2',
         'custom-gray': '#f2f2f2',
         'custom-dark-green' : '#15575a',
@@ -22,7 +23,7 @@ export default {
       fontSize: {
         'fs-900': '6rem',
         'fs-800': '4.5rem',
-        'fs-700' : '3.75rem',
+        'fs-700' : '2.75rem',
         'fs-600' : '2.125rem',
         'fs-500' : '1.5rem',
         'fs-400': '1.2rem',

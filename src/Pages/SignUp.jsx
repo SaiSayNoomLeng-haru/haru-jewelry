@@ -3,7 +3,7 @@ import { memo } from "react"
 const SignUp = () => {
     return(
         <div >
-           Home
+           sign up
         </div>
     )
 }

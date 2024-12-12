@@ -8,4 +8,4 @@ const SignIn = () => {
     )
 }
 
-export default memo(Sign Up)
+export default memo(SignIn)

@@ -25,14 +25,14 @@ export default function Header() {
         'before:absolute before:content-[""] before:w-4 before:h-[2px] before:bg-black before:top-[-4px] before:right-0 before:rounded-lg',
         'after:absolute after:content-[""] after:w-2 after:h-[2px] after:bg-black after:bottom-[-4px] after:right-0 after:rounded-lg',
         {
-            'rotate-45 fixed' : isNavExpanded,
+            'rotate-45' : isNavExpanded,
             'before:rotate-90 before:!top-0 before:!w-3' : isNavExpanded,
             'after:hidden' : isNavExpanded,
         }
     )
 
     const navPages = classNames(
-        'flex flex-col gap-3 px-3 py-5 md:text-fs-300 fixed z-10 top-[80px] right-3 bottom-[75vh] md:bottom-[65vh] left-[60vw] md:left-[70vw] bg-custom-gray border translate-x-[150%] transition-all duration-500',
+        'flex flex-col gap-3 px-3 py-5 md:text-fs-300 fixed z-10 top-[80px] right-3 bottom-[70vh] md:bottom-[60vh] left-[60vw] md:left-[70vw] bg-custom-gray border translate-x-[150%] transition-all duration-500',
         {
             '!translate-x-0': isNavExpanded
         }

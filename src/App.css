@@ -15,3 +15,16 @@
   margin-block: 1em;
   padding-inline: calc(100% - 1em)
 }
+
+.custom-divider{
+  @apply w-[90%] mx-auto h-[1px] bg-black
+}
+
+.custom-line{position: relative;}
+.custom-line::before{
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1px;
+  background-color: black;
+}

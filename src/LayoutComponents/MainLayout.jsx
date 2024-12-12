@@ -7,7 +7,7 @@ export default function MainLayout() {
   return (
     <div>
       <Header />
-        <main className='min-h-[80vh]'>
+        <main >
             <Outlet />
         </main>
       <Footer />
