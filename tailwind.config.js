@@ -36,7 +36,8 @@ export default {
       },
       animation: {
         'rotate' : 'rotate 300ms ease-in-out 1',
-        'rotateReverse' : 'rotateReverse 300ms ease-in-out 1'
+        'rotateReverse' : 'rotateReverse 300ms ease-in-out 1',
+        'inputError' : 'shake 100ms linear 5'
       },
       keyframes: {
         rotate : {
@@ -46,6 +47,11 @@ export default {
         rotateReverse : {
           '0%' : { transform: 'rotate(180deg)'},
           '100%' : { transform: 'rotate(0)'}
+        },
+        shake: {
+          '0%, 100%' : { transform: 'translateX(0)'},
+          '20%, 60%' : { transform: 'translateX(-3px)'},
+          '40%, 80%' : { transform: 'translateX(3px)'}
         }
         
       }

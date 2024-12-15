@@ -13,7 +13,7 @@
 
 .custom-container{
   margin-block: 1em;
-  padding-inline: calc(100% - 1em)
+  padding-inline: 1em;
 }
 
 .custom-divider{

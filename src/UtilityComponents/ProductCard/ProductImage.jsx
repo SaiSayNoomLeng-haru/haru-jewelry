@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Image() {
+export default function Image({imgUrl}) {
   return (
     <div className='overflow-hidden relative'>
         <img 
-          src="/assets/images/sample.png" 
+          src={imgUrl} 
           alt="" 
           loading='lazy'
           className='max-w-[200px] scale-75 hover:scale-125 hover:rotate-45 transition-all cursor-pointer'/>

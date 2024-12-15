@@ -5,6 +5,8 @@ import {
 import { lazy, Suspense } from 'react'
 import './App.css'
 import MainLayout from './LayoutComponents/MainLayout';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Lazy Components
 const LoadingSpinner = lazy(() => import('./UtilityComponents/LoadingSpinner'));
@@ -29,6 +31,9 @@ const AuthErrorBoundary = lazy(() => import('./Components/AuthErrorBoundary'));
 
 // loaders
 import { loader as HomePageLoader } from './Pages/Home';
+
+// actions
+import { action as ContactUsAction } from './Pages/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -74,7 +79,8 @@ const router = createBrowserRouter([
       {
         path: 'contact-us',
         element: <ContactUs />,
-        errorElement: <ErrorBoundary />
+        errorElement: <ErrorBoundary />,
+        action: ContactUsAction
       },
       {
         path: 'faq',
@@ -124,6 +130,19 @@ function App() {
   return (
     <Suspense fallback={<LoadingSpinner />}>
       <RouterProvider router={router} />
+      <ToastContainer
+          position="bottom-center"
+          autoClose={1999}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition: Bounce
+          />
     </Suspense>
   )
 }
